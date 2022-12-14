@@ -9,6 +9,7 @@ documentation.
 
 * Python version 3.7.6 or greater
 * Python packages listed in `requirements.txt`
+* nltk punkt models. To install: https://www.nltk.org/data.html
 
 ## How to use it
 

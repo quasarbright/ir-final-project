@@ -10,11 +10,11 @@ from collections import defaultdict
 from functools import lru_cache
 from dataclasses import dataclass
 import pickle
-from typing import Optional, Union, Dict, List, Any
+from typing import Optional, Dict, List, Any
 from bs4 import BeautifulSoup, Tag
 import requests
 from urllib.parse import urljoin
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import wordpunct_tokenize
 from nltk.stem.porter import PorterStemmer
 
 
@@ -313,7 +313,7 @@ def tags_to_text(tags: List[Tag]) -> str:
 
 def tokenize(text: str) -> List[Token]:
     """Tokenize text."""
-    return word_tokenize(text)
+    return wordpunct_tokenize(text)
 
 
 def stem_tokens(tokens: List[Token]) -> List[SToken]:
