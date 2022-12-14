@@ -99,12 +99,12 @@ class ScrapeTree:
 
 
 def save_index(index: Index, out_file):
-    """Save index to file"""
+    """Save index to file. out_file is a file-like object."""
     pickle.dump(index, out_file)
 
 
 def load_index(in_file) -> Index:
-    """Load an index created from build_and_save_index"""
+    """Load an index created from build_and_save_index. in_file is a file-like object."""
     index = pickle.load(in_file)
     assert isinstance(index, Index), "loaded something that isn't a saved index"
     return index
